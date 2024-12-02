@@ -12,8 +12,8 @@ class API(BaseSettings):
     version: str = "1.0"
 
 
-class UsersDatabase(BaseSettings):
-    url: PostgresDsn
+class Database(BaseSettings):
+    url: PostgresDsn = PostgresDsn("postgresql+asyncpg://user:password@localhost:5430/users")
     echo: bool = False
     echo_pool: bool = False
     pool_size: int = 50
@@ -23,7 +23,7 @@ class UsersDatabase(BaseSettings):
 class Configurations(BaseSettings):
     launch: Launch = Launch()
     api: API = API()
-    users_db: UsersDatabase
-    
+    db: Database = Database()
+
 
 cfg = Configurations()

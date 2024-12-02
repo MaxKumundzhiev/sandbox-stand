@@ -4,3 +4,4 @@ pydantic[email]
 pydantic-settings==2.6.1
 async-sqlalchemy==1.0.0
 asyncpg==0.30.0
+greenlet==3.1.1

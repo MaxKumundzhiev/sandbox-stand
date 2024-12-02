@@ -39,9 +39,9 @@ class UsersDatabase:
 
 
 users_db_interface = UsersDatabase(
-    url=str(cfg.users_db.url), 
-    echo=cfg.users_db.echo, 
-    echo_pool=cfg.users_db.echo,
-    pool_size=cfg.users_db.pool_size,
-    max_overflow=cfg.users_db.max_overflow
+    url=str(cfg.db.url), 
+    echo=cfg.db.echo, 
+    echo_pool=cfg.db.echo,
+    pool_size=cfg.db.pool_size,
+    max_overflow=cfg.db.max_overflow
 )
