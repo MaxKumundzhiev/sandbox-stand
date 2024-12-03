@@ -14,7 +14,7 @@ class API(BaseSettings):
 
 class UsersDatabase(BaseSettings):
     url: str = "postgresql+asyncpg://user:password@localhost:5430/users"
-    echo: bool = False
+    echo: bool = True
     echo_pool: bool = False
     pool_size: int = 50
     max_overflow: int = 10

@@ -11,23 +11,23 @@ class CreateIn(Base):
 
 
 class CreateOut(Base):
-    id: str
+    id: int
 
 
 class ReadIn(BaseModel):
-    id: str
+    id: int
 
 
 class ReadOut(Base):
-    id: str
+    id: int
 
 
 class UpdateIn(Base):
     ...
 
 class UpdateOut(Base):
-    id: str
+    id: int
 
 
 class DeleteIn(BaseModel):
-    id: str
+    id: int
