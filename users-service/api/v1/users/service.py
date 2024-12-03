@@ -1,3 +1,6 @@
+from typing import AsyncGenerator
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from api.v1.users.scheme import (
     CreateIn,
     CreateOut,
@@ -10,9 +13,11 @@ from api.v1.users.scheme import (
 
 
 class Service:
-    def __init__(self) -> None:
-        pass
-
+    def __init__(
+        self, db_session: AsyncGenerator[AsyncSession, None]
+    ) -> None:
+        db_session = db_session
+    
     async def create(request: CreateIn) -> CreateOut:
         ...
     
