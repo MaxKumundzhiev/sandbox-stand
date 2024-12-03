@@ -5,8 +5,7 @@ from api.v1.users.scheme import (
     ReadOut,
     UpdateIn,
     UpdateOut,
-    DeleteIn,
-    DeleteOut
+    DeleteIn
 )
 
 

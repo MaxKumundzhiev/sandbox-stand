@@ -6,7 +6,7 @@ from api.v1.users.router import router as users
 
 
 application = FastAPI()
-application.include_router(router=users)
+application.include_router(router=users, prefix="/users")
 
 
 # for debug purposes
